@@ -1,3 +1,5 @@
+import math
+
 import pandas as pd
 import numpy as np
 
@@ -24,21 +26,19 @@ def cointegration(series_1, series_2):
     coint_test = 0
     t_value, p_value, critical_value = coint(series_1, series_2)
     model = sm.OLS(series_1, series_2).fit()  # To calculate the hedge ratio
-    hedge_ratio = model.params[0]
+    hedge_ratio = model.params.iloc[0]
     spread = calc_spread(series_1, series_2, hedge_ratio)
     zero_crossings = len(np.where(np.diff(np.sign(spread)))[0])
-    if p_value < 0.5 and t_value < critical_value:
+    if p_value < 0.5 and t_value < critical_value[1]:
         coint_test = 1
     return (coint_test, round(p_value, 2), round(t_value, 2),
-            round(critical_value, 2), round(hedge_ratio, 2), zero_crossings)
+            round(critical_value[1], 2), round(hedge_ratio, 2), zero_crossings)
 
 
 # Extracting close prices from the data
 def close_prices(prices):
-    close_prices = []
-    for candle in prices:
-        close_prices.append(candle[4])
-    return close_prices
+    closing_prices = [float(candle[4]) for candle in prices["list"] if not math.isnan(float(candle[4]))]
+    return closing_prices
 
 
 # Calculating Cointegrated Pairs
@@ -54,8 +54,8 @@ def cointegrated_pairs(prices):
                 if unique in included_list:
                     continue
 
-                series_1 = pd.Series(close_prices(prices[symbol_1]["list"]))
-                series_2 = pd.Series(close_prices(prices[symbol_2]["list"]))
+                series_1 = pd.Series(close_prices(prices[symbol_1]))
+                series_2 = pd.Series(close_prices(prices[symbol_2]))
 
                 coint_test, p_value, t_value, c_value, hedge_ratio, zero_crossings = cointegration(series_1, series_2)
                 if coint_test == 1:

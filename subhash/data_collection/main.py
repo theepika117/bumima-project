@@ -1,10 +1,13 @@
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 from pick_instruments import instruments
 from store_data import store_data
 from cointegration import cointegrated_pairs
 import json
 
 if __name__ == "__main__":
-    #
+
     # # Getting all available symbols
     # print("Fetching available instruments...")
     # response = instruments()

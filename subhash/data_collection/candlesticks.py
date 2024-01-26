@@ -17,7 +17,7 @@ def get_candles(symbol):
         symbol=symbol, category="linear", interval=interval, limit=limit, start=start_seconds
     )
 
-    # In order to manage API calls
+    # In order to manage API call limit issues
     time.sleep(0.1)
 
-    return candles["result"]
+    return candles["result"] if len(candles["result"]["list"]) == limit else []
