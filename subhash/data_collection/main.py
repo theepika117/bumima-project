@@ -8,15 +8,15 @@ import json
 
 if __name__ == "__main__":
 
-    # # Getting all available symbols
-    # print("Fetching available instruments...")
-    # response = instruments()
-    #
-    # # Saving price history data
-    # print(f"Successfully fetched {len(response)} total symbols")
-    # print("Constructing and saving price data in JSON...")
-    # if len(response) > 0:
-    #     store_data(response.values())
+    # Getting all available symbols
+    print("Fetching available instruments...")
+    response = instruments()
+
+    # Saving price history data
+    print(f"Successfully fetched {len(response)} total symbols")
+    print("Constructing and saving price data in JSON...")
+    if len(response) > 0:
+        store_data(response.values())
 
     # Getting Co-integrated pairs
     print("Calculating co-integration...")
@@ -24,4 +24,3 @@ if __name__ == "__main__":
         price_data = json.load(file)
         if len(price_data) > 0:
             pairs = cointegrated_pairs(price_data)
-

@@ -290,3 +290,45 @@ ZENUSDT
 ZILUSDT
 ZKFUSDT
 ZRXUSDT
+Not enought data available for 1000000VINUUSDT
+Not enought data available for 10000SATSUSDT
+Not enought data available for 1000RATSUSDT
+Not enought data available for 1CATUSDT
+Not enought data available for ACEUSDT
+Not enought data available for AERGOUSDT
+Not enought data available for AGIUSDT
+Not enought data available for AIUSDT
+Not enought data available for ALTUSDT
+Not enought data available for ATOMUSDT
+Not enought data available for AXLUSDT
+Not enought data available for BEAMUSDT
+Not enought data available for BNBUSDT
+Not enought data available for CTCUSDT
+Not enought data available for DATAUSDT
+Not enought data available for FUNUSDT
+Not enought data available for GODSUSDT
+Not enought data available for JTOUSDT
+Not enought data available for LSKUSDT
+Not enought data available for MANTAUSDT
+Not enought data available for MBLUSDT
+Not enought data available for MBOXUSDT
+Not enought data available for METISUSDT
+Not enought data available for MOVRUSDT
+Not enought data available for MYRIAUSDT
+Not enought data available for MYROUSDT
+Not enought data available for NFPUSDT
+Not enought data available for ONDOUSDT
+Not enought data available for ONGUSDT
+Not enought data available for PYTHUSDT
+Not enought data available for QIUSDT
+Not enought data available for RAREUSDT
+Not enought data available for RAYUSDT
+Not enought data available for REEFUSDT
+Not enought data available for RSRUSDT
+Not enought data available for SILLYUSDT
+Not enought data available for SUPERUSDT
+Not enought data available for USTCUSDT
+Not enought data available for WIFUSDT
+Not enought data available for XAIUSDT
+Not enought data available for XRDUSDT
+Not enought data available for ZKFUSDT

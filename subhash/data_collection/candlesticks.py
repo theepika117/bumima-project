@@ -19,5 +19,7 @@ def get_candles(symbol):
 
     # In order to manage API call limit issues
     time.sleep(0.1)
+    candles = candles["result"]
+    candles["list"] = [[float(price) for price in candle] for candle in candles["list"]]
 
-    return candles["result"] if len(candles["result"]["list"]) == limit else []
+    return candles if len(candles["list"]) == limit else {}
