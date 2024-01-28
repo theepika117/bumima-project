@@ -1,4 +1,4 @@
-from setup import symbols
+from settings import symbols
 
 
 def instruments():

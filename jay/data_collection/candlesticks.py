@@ -1,4 +1,4 @@
-from setup import session, interval, limit
+from settings import session, interval, limit
 import datetime
 import time
 

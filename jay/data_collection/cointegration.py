@@ -22,7 +22,7 @@ def calc_spread(series_1, series_2, hedge_ratio):
 
 
 # Calculating Co-integration
-def cointegration(series_1, series_2):
+def cointegrate(series_1, series_2):
     coint_test = 0
     t_value, p_value, critical_value = coint(series_1, series_2)
     model = sm.OLS(series_1, series_2).fit()  # To calculate the hedge ratio
@@ -35,13 +35,13 @@ def cointegration(series_1, series_2):
             round(critical_value[1], 2), round(hedge_ratio, 2), zero_crossings)
 
 
-# Extracting close prices from the data
+# Extracting closing prices from the data
 def close_prices(prices):
     closing_prices = [candle[4] for candle in prices["list"] if not math.isnan(candle[4])]
     return closing_prices
 
 
-# Calculating Cointegrated Pairs
+# Finding Cointegrated Pairs
 def cointegrated_pairs(prices):
     pairs = []
     included_pairs = []
@@ -57,7 +57,7 @@ def cointegrated_pairs(prices):
                 series_1 = close_prices(prices[symbol_1])
                 series_2 = close_prices(prices[symbol_2])
 
-                coint_test, p_value, t_value, c_value, hedge_ratio, zero_crossings = cointegration(series_1, series_2)
+                coint_test, p_value, t_value, c_value, hedge_ratio, zero_crossings = cointegrate(series_1, series_2)
                 if coint_test:
                     included_pairs.append(unique)
                     pairs.append({
@@ -69,8 +69,10 @@ def cointegrated_pairs(prices):
                         "hedge_ratio": hedge_ratio,
                         "Zero_crossings": zero_crossings
                     })
-
-    coint_df = pd.DataFrame(pairs).sort_values(by="zero_crossings", ascending=False)
+    if not pairs:
+        print("No cointegrated pairs found; Try adjusting the candle limit and interval")
+        return None
+    coint_df = pd.DataFrame(pairs).sort_values(by="Zero_crossings", ascending=False)
     coint_df.to_csv("co-integrated_pairs.csv", index=False)
-    print("Calculations successful; Report has been saved in co-integrated_pairs.csv")
+    print("Calculations completed; Report has been saved in co-integrated_pairs.csv")
     return coint_df
