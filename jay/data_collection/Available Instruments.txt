@@ -1,8 +1,8 @@
-1000000VINUUSDT
 10000LADYSUSDT
 10000NFTUSDT
 10000SATSUSDT
 10000STARLUSDT
+10000WENUSDT
 1000BONKUSDT
 1000BTTUSDT
 1000FLOKIUSDT
@@ -63,7 +63,6 @@ BNXUSDT
 BOBAUSDT
 BONDUSDT
 BSVUSDT
-BSWUSDT
 BTCUSDT
 C98USDT
 CAKEUSDT
@@ -145,6 +144,7 @@ JASMYUSDT
 JOEUSDT
 JSTUSDT
 JTOUSDT
+JUPUSDT
 KASUSDT
 KAVAUSDT
 KDAUSDT
@@ -193,6 +193,7 @@ NTRNUSDT
 OCEANUSDT
 OGNUSDT
 OGUSDT
+OKBUSDT
 OMGUSDT
 ONDOUSDT
 ONEUSDT
@@ -240,6 +241,7 @@ SOLUSDT
 SSVUSDT
 STEEMUSDT
 STGUSDT
+STMXUSDT
 STORJUSDT
 STPTUSDT
 STRAXUSDT
@@ -249,6 +251,7 @@ SUPERUSDT
 SUSHIUSDT
 SWEATUSDT
 SXPUSDT
+TAOUSDT
 THETAUSDT
 TIAUSDT
 TLMUSDT
@@ -272,7 +275,6 @@ WAXPUSDT
 WIFUSDT
 WLDUSDT
 WOOUSDT
-WSMUSDT
 XAIUSDT
 XEMUSDT
 XLMUSDT
@@ -287,11 +289,11 @@ YFIUSDT
 YGGUSDT
 ZECUSDT
 ZENUSDT
+ZETAUSDT
 ZILUSDT
-ZKFUSDT
 ZRXUSDT
-Not enought data available for 1000000VINUUSDT
 Not enought data available for 10000SATSUSDT
+Not enought data available for 10000WENUSDT
 Not enought data available for 1000RATSUSDT
 Not enought data available for 1CATUSDT
 Not enought data available for ACEUSDT
@@ -308,6 +310,7 @@ Not enought data available for DATAUSDT
 Not enought data available for FUNUSDT
 Not enought data available for GODSUSDT
 Not enought data available for JTOUSDT
+Not enought data available for JUPUSDT
 Not enought data available for LSKUSDT
 Not enought data available for MANTAUSDT
 Not enought data available for MBLUSDT
@@ -317,6 +320,7 @@ Not enought data available for MOVRUSDT
 Not enought data available for MYRIAUSDT
 Not enought data available for MYROUSDT
 Not enought data available for NFPUSDT
+Not enought data available for OKBUSDT
 Not enought data available for ONDOUSDT
 Not enought data available for ONGUSDT
 Not enought data available for PYTHUSDT
@@ -327,8 +331,9 @@ Not enought data available for REEFUSDT
 Not enought data available for RSRUSDT
 Not enought data available for SILLYUSDT
 Not enought data available for SUPERUSDT
+Not enought data available for TAOUSDT
 Not enought data available for USTCUSDT
 Not enought data available for WIFUSDT
 Not enought data available for XAIUSDT
 Not enought data available for XRDUSDT
-Not enought data available for ZKFUSDT
+Not enought data available for ZETAUSDT

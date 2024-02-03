@@ -31,7 +31,8 @@ if __name__ == "__main__":
     # Plotting charts and saving for backtesting
         if len(price_data) > 0 and pairs is not None:
             pairs_data = pd.read_csv("co-integrated_pairs.csv")
-            instrument_1 = pairs_data.iloc[0]['Instrument-1']
-            instrument_2 = pairs_data.iloc[0]['Instrument-2']
+            index = 0  # Rank of the pair to be plotted
+            instrument_1 = pairs_data.iloc[index]['Instrument-1']
+            instrument_2 = pairs_data.iloc[index]['Instrument-2']
             print("Plotting charts...")
             plot_charts(instrument_1, instrument_2, price_data)
