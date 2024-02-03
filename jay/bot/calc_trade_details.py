@@ -9,7 +9,6 @@ def close_prices(prices):
 
 def calc_trade_details(orderbook, direction="Long", capital=0):
     """Returns prices, stop loss / fail-safe and quantity"""
-
     mid_price, quantity, fail_safe = 0, 0, 0
 
     if orderbook:
@@ -30,10 +29,11 @@ def calc_trade_details(orderbook, direction="Long", capital=0):
 
             if direction == "Long":
                 mid_price = nearest_bid
+                fail_safe = round(mid_price * (1 - stop_loss), price_round)
             else:
                 mid_price = nearest_ask
+                fail_safe = round(mid_price * (1 + stop_loss), price_round)
 
-            fail_safe = round(mid_price * (1 - stop_loss), price_round)
             quantity = round(capital / mid_price, quantity_round)
 
     return mid_price, fail_safe, quantity
