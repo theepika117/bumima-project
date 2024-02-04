@@ -1,9 +1,9 @@
 from settings import instrument_1, stop_loss, rounding_1, rounding_2, qty1_rounding, qty2_rounding
-import math
 
 
 def close_prices(prices):
-    closing_prices = [candle[4] for candle in prices["list"] if not math.isnan(candle[4])]
+    closing_prices = [(float(candle[4])) for candle in prices["list"]
+                      if not str(candle[4]).lower() == 'nan']
     return closing_prices
 
 
