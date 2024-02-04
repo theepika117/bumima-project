@@ -1,4 +1,4 @@
-from settings import overvalued, undervalued, session_private
+from settings import instrument_1, instrument_2, session_private
 
 
 def position_info(ticker):
@@ -31,17 +31,19 @@ def close_position(ticker, side, size):
     return
 
 
-def exit_all_positions():
+def exit_all_positions(switch):
     """Closes all the existing positions and cancels any pending orders"""
-    session_private.cancel_all_orders(category="linear", symbol=overvalued, settleCoin="USDT")
-    session_private.cancel_all_orders(category="linear", symbol=undervalued, settleCoin="USDT")
+    session_private.cancel_all_orders(category="linear", symbol=instrument_1, settleCoin="USDT")
+    session_private.cancel_all_orders(category="linear", symbol=instrument_2, settleCoin="USDT")
 
-    side_1, size_1 = position_info(overvalued)
-    side_2, size_2 = position_info(undervalued)
+    side_1, size_1 = position_info(instrument_1)
+    side_2, size_2 = position_info(instrument_2)
 
     if size_1 > 0:
-        close_position(overvalued, side_2, size_1)
+        close_position(instrument_1, side_2, size_1)
 
     if size_2 > 0:
-        close_position(undervalued, side_1, size_2)
-    return
+        close_position(instrument_2, side_1, size_2)
+
+    switch = 0
+    return switch
