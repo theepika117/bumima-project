@@ -67,4 +67,3 @@ def liquidity(ticker):
         latest_price = float(trades["result"]["list"][0]["price"])
         return avg_liq, latest_price
     return 0, 0
-

@@ -12,7 +12,7 @@ def review_order(ticker, remaining_capital):
     mid_price, _, _ = calc_trade_details(orderbook)
 
     # Getting details of the trade
-    _, order_price, order_qty, order_status = check_orders(ticker)
+    _, _, _, order_status = check_orders(ticker)
 
     # Getting open positions
     _, position_price, position_quantity = check_positions(ticker)

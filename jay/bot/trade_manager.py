@@ -138,8 +138,8 @@ def trade(switch):
 
                 else:
                     # Canceling all active orders
-                    session_private.cancel_all_active_orders(symbol=instrument_2)
-                    session_private.cancel_all_active_orders(symbol=instrument_1)
+                    session_private.cancel_all_orders(symbol=instrument_2)
+                    session_private.cancel_all_orders(symbol=instrument_1)
                     switch = 1
 
     return switch, signal_side
