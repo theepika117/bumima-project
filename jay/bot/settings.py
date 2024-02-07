@@ -16,7 +16,7 @@ session = HTTP(testnet=test)
 session_private = HTTP(testnet=test, api_key=key, api_secret=private)
 
 pairs_data = pd.read_csv("../data_collection/co-integrated_pairs.csv")
-index = 63  # index of the pair to be traded
+index = 0  # index of the pair to be traded
 instrument_1 = pairs_data.iloc[index]['Instrument-1']
 instrument_2 = pairs_data.iloc[index]['Instrument-2']
 
